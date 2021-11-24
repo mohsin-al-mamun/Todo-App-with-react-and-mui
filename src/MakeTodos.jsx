@@ -13,7 +13,9 @@ function MakeTodos(){
          setItem(event.target.value);
     }
 
-    const showAllItems = ()=>{
+    const showAllItems = (e)=>{
+      
+       e.preventDefault();
        setListItems((prevData)=>{
          return [...prevData, item]
        });
@@ -28,10 +30,12 @@ function MakeTodos(){
         <br />
         <h3>Todo List</h3>
         <br />
-        <input type="text" placeholder="Add an item" value={item} onChange={storeItem} />
-        <Button className='newBtn' onClick={showAllItems} >
+        <form onSubmit={showAllItems} > <input type="text" placeholder="Add an item" value={item} onChange={storeItem} />
+        <Button className='newBtn'  type='submit' >
             <AddIcon/>
         </Button>
+        </form>
+        
         <br />
         <ol> 
         {
