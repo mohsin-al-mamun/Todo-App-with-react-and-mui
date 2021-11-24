@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+// import App from './App';
 import reportWebVitals from './reportWebVitals';
+import MakeTodos from './MakeTodos'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <MakeTodos />
   </React.StrictMode>,
   document.getElementById('root')
 );
